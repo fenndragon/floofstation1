@@ -1,9 +1,0 @@
-﻿- type: worldgenConfig
-  id: DefaultNF
-  components:
-    - type: WorldController
-    - type: BiomeSelection
-      biomes:
-        - AsteroidsFallback
-        - Failsafe
-        - AsteroidsStandardNF
