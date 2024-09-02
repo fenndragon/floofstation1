@@ -1,0 +1,16 @@
+
+- type: job
+  id: MedicalBorg
+  name: job-name-medical-borg
+  description: job-description-medical-borg
+  playTimeTracker: JobMedicalBorg
+  requirements:
+    - !type:CharacterOverallTimeRequirement
+      min: 21600 #6 hrs floof
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      min: 3600 #1 hrs floof
+  canBeAntag: false
+  icon: JobIconMedicalBorg
+  supervisors: job-supervisors-cmo
+  jobEntity: PlayerBorgMedical

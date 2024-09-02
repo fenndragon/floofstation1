@@ -1,0 +1,55 @@
+- type: job
+  id: Captain
+  name: job-name-captain
+  description: job-description-captain
+  playTimeTracker: JobCaptain
+  requirements:
+    - !type:CharacterDepartmentTimeRequirement
+      department: Logistics # DeltaV - Logistics Department replacing Cargo
+      min: 14400 # Floofstation - 4 hour
+    - !type:CharacterDepartmentTimeRequirement
+      department: Engineering
+      min: 14400 # Floofstation - 4 hour
+    - !type:CharacterDepartmentTimeRequirement
+      department: Medical
+      min: 14400 # Floofstation - 4 hour
+    - !type:CharacterDepartmentTimeRequirement
+      department: Security
+      min: 14400 # Floofstation - 4 hour
+    - !type:CharacterDepartmentTimeRequirement # DeltaV - Epistemics dept time requirement
+      department: Epistemics # DeltaV - Epistemics Department replacing Science
+      min: 14400 # Floofstation - 4 hour
+    - !type:CharacterDepartmentTimeRequirement
+      department: Command
+      min: 14400 # Floofstation - 4 hour
+  weight: 20
+  startingGear: CaptainGear
+  icon: "JobIconCaptain"
+  requireAdminNotify: true
+  joinNotifyCrew: true
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: CaptainGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCaptain
+    back: ClothingBackpackCaptainFilled
+    shoes: ClothingShoesBootsLaceup
+    head: ClothingHeadHatCaptain
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesCaptain
+    outerClothing: ClothingOuterArmorCaptainCarapace
+    id: CaptainPDA
+    ears: ClothingHeadsetAltCommand
+  innerClothingSkirt: ClothingUniformJumpskirtCaptain
+  satchel: ClothingBackpackSatchelCaptainFilled
+  duffelbag: ClothingBackpackDuffelCaptainFilled

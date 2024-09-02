@@ -1,0 +1,40 @@
+- type: job
+  id: Librarian
+  name: job-name-librarian
+  description: job-description-librarian
+  playTimeTracker: JobLibrarian
+  requirements:
+    - !type:CharacterDepartmentTimeRequirement
+      department: Epistemics
+      min: 3600
+  startingGear: LibrarianGear
+  icon: "JobIconLibrarian"
+  supervisors: job-supervisors-rd
+  access:
+  - Research
+  - Maintenance
+  - Library
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Psionic
+    - type: InnatePsionicPowers
+      powersToAdd:
+        - XenoglossyPower
+        - TelepathyPower
+
+
+- type: startingGear
+  id: LibrarianGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitLibrarian
+    back: ClothingBackpackLibrarianFilled
+    shoes: ClothingShoesBootsLaceup
+    outerClothing: ClothingOuterCoatRnd
+    id: LibrarianPDA
+    ears: ClothingHeadsetScience
+    pocket1: d10Dice
+    pocket2: HandLabeler
+  innerClothingSkirt: ClothingUniformJumpskirtLibrarian
+  satchel: ClothingBackpackSatchelLibrarianFilled
+  duffelbag: ClothingBackpackDuffelLibrarianFilled

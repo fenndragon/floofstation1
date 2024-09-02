@@ -1,0 +1,178 @@
+# vocal emotes
+- type: emote
+  id: Scream
+  category: Vocal
+  chatMessages: [ screams ]
+  chatTriggers:
+    - screams
+    - shrieks
+    - screeches
+    - yells
+
+- type: emote
+  id: Laugh
+  category: Vocal
+  chatMessages: [ laughs ]
+  chatTriggers:
+    - laughs
+    - chuckles
+    - giggles
+    - chortles
+
+- type: emote
+  id: Honk
+  category: Vocal
+  chatMessages: [ honks ]
+  chatTriggers:
+    - honks
+
+- type: emote
+  id: Sigh
+  category: Vocal
+  chatMessages: [ sighs ]
+  chatTriggers:
+    - sighs
+
+- type: emote
+  id: Whistle
+  category: Vocal
+  chatMessages: [ whistles ]
+  chatTriggers:
+    - whistles
+
+- type: emote
+  id: Crying
+  category: Vocal
+  chatMessages: [ cries ]
+  chatTriggers:
+    - cries
+    - sobs
+
+- type: emote
+  id: Squish
+  category: Vocal
+  chatMessages: [ squishes ]
+  chatTriggers:
+    - squishes
+
+- type: emote
+  id: Chitter
+  category: Vocal
+  chatMessages: [ chitters ]
+  chatTriggers:
+   - chitters
+
+- type: emote
+  id: Squeak
+  category: Vocal
+  chatMessages: [ squeaks ]
+  chatTriggers:
+   - squeaks
+
+- type: emote
+  id: Click
+  category: Vocal
+  chatMessages: [ clicks ]
+  chatTriggers:
+   - clicks
+
+# hand emotes
+- type: emote
+  id: Clap
+  category: Hands
+  chatMessages: [ claps ]
+  chatTriggers:
+    - claps
+
+- type: emote
+  id: Snap
+  category: Hands
+  chatMessages: [ snaps ] # snaps <{THEIR($ent)}> fingers?
+  chatTriggers:
+    - snaps
+    - snaps fingers
+    - snaps his fingers
+    - snaps her fingers
+    - snaps their fingers
+    - snaps its fingers
+    - snaps its' fingers
+
+- type: emote
+  id: Salute
+  category: Hands
+  chatMessages: [ salutes ]
+  chatTriggers:
+    - salutes
+
+- type: emote
+  id: DefaultDeathgasp
+  chatMessages: ["emote-deathgasp"]
+  chatTriggers:
+  - deathgasp
+
+- type: emote
+  id: SiliconDeathgasp
+  chatMessages: ["chat-emote-msg-deathgasp-silicon"]
+  chatTriggers:
+  - sdeathgasp
+
+- type: emote
+  id: Buzz
+  category: Vocal
+  chatMessages: [ buzzes ]
+  chatTriggers:
+    - buzzes
+
+- type: emote
+  id: Weh
+  category: Vocal
+  chatMessages: [ wehs ]
+
+- type: emote
+  id: Chirp
+  category: Vocal
+  chatMessages: [ chirps ]
+  chatTriggers:
+    - chirps
+
+# Machine Emotes
+- type: emote
+  id: Beep
+  category: Vocal
+  chatMessages: [ beeps ]
+  chatTriggers:
+    - beeps
+
+- type: emote
+  id: Boop
+  category: Vocal
+  chatMessages: [ boops ]
+  chatTriggers:
+    - boops
+
+- type: emote
+  id: Chime
+  category: Vocal
+  chatMessages: [ chimes ]
+  chatTriggers:
+    - chimes
+
+- type: emote
+  id: Buzz-Two
+  category: Vocal
+  chatMessages: [ "buzzes twice" ]
+  chatTriggers:
+    - buzzes twice
+
+- type: emote
+  id: Ping
+  category: Vocal
+  chatMessages: [ pings ]
+  chatTriggers:
+    - pings
+
+- type: emote
+  id: Whirr # uncategorized as it is generic
+  chatMessages: [ whirrs ]
+  chatTriggers:
+    - whirrs
