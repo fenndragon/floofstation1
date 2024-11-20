@@ -9,37 +9,6 @@
   name: Urist McShadow
   abstract: true
   components:
-    - type: Destructible
-      thresholds:
-        - trigger:
-            !type:DamageTypeTrigger
-            damageType: Blunt
-            damage: 400
-          behaviors:
-            - !type:GibBehavior {}
-            - !type:SpawnEntitiesBehavior
-              spawn:
-                ShadowkinShadow:
-                  min: 1
-                  max: 1
-                EffectFlashShadowkinShadeskip:
-                  min: 1
-                  max: 1
-        - trigger:
-            !type:DamageTypeTrigger
-            damageType: Heat
-            damage: 1500
-          behaviors:
-            - !type:SpawnEntitiesBehavior
-              spawnInContainer: true
-              spawn:
-                Ash:
-                  min: 1
-                  max: 1
-            - !type:BurnBodyBehavior {}
-            - !type:PlaySoundBehavior
-              sound:
-                collection: MeatLaserImpact
     - type: PassiveDamage # Slight passive regen. Assuming one damage type, comes out to about 4 damage a minute.
       allowedStates:
         - Alive
@@ -67,6 +36,17 @@
         - Pacified
         - StaminaModifier
     - type: Blindable
+    - type: Temperature
+    heatDamageThreshold: 325
+    coldDamageThreshold: 260
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 0.1 #per second, scales with temperature & other constants
+    heatDamage:
+      types:
+        Heat: 1.5 #per second, scales with temperature & other constants
     - type: ThermalRegulator
       metabolismHeat: 800
       radiatedHeat: 100
@@ -97,11 +77,6 @@
       damage:
         types:
           Heat: 1.5 # burn more
-    - type: MobThresholds
-      thresholds: # Weak
-        0: Alive
-        80: Critical
-        180: Dead
     - type: SlowOnDamage
       speedModifierThresholds:
         48: 0.85
@@ -120,17 +95,6 @@
       bloodlossHealDamage:
         types:
           Bloodloss: -0.25
-    - type: Temperature
-      heatDamageThreshold: 330
-      coldDamageThreshold: 195
-      currentTemperature: 310.15
-      specificHeat: 46
-      coldDamage:
-        types:
-          Cold: 0.05 #per second, scales with temperature & other constants
-      heatDamage:
-        types:
-          Heat: 0.25 #per second, scales with temperature & other constants
     - type: Fixtures
       fixtures:
         fix1:
