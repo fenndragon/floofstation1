@@ -10,7 +10,7 @@
   canBeAntagTarget: false
   icon: "JobIconNoId"
   joinNotifyCrew: false
-  whitelisted: true
+  whitelisted: false
   access:
   - Maintenance
   requirements:
