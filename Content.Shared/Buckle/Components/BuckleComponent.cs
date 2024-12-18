@@ -75,13 +75,90 @@ public sealed partial class BuckleComponent : Component
     /// Used for client rendering
     /// </summary>
     [ViewVariables] public int? OriginalDrawDepth;
+    [DataField, AutoNetworkedField]
+    public float? BuckleDelay;
+
+    [DataField, AutoNetworkedField]
+    public bool ClickUnbuckle = true;
 }
 
-[ByRefEvent]
-public record struct BuckleAttemptEvent(EntityUid StrapEntity, EntityUid BuckledEntity, EntityUid UserEntity, bool Buckling, bool Cancelled = false);
+public sealed partial class UnbuckleAlertEvent : BaseAlertEvent;
 
+/// <summary>
+/// Event raised directed at a strap entity before some entity gets buckled to it.
+/// </summary>
 [ByRefEvent]
-public readonly record struct BuckleChangeEvent(EntityUid StrapEntity, EntityUid BuckledEntity, bool Buckling);
+public record struct StrapAttemptEvent(
+    Entity<StrapComponent> Strap,
+    Entity<BuckleComponent> Buckle,
+    EntityUid? User,
+    bool Popup)
+{
+    public bool Cancelled;
+}
+
+/// <summary>
+/// Event raised directed at a buckle entity before it gets buckled to some strap entity.
+/// </summary>
+[ByRefEvent]
+public record struct BuckleAttemptEvent(
+    Entity<StrapComponent> Strap,
+    Entity<BuckleComponent> Buckle,
+    EntityUid? User,
+    bool Popup)
+{
+    public bool Cancelled;
+}
+
+/// <summary>
+/// Event raised directed at a strap entity before some entity gets unbuckled from it.
+/// </summary>
+[ByRefEvent]
+public record struct UnstrapAttemptEvent(
+    Entity<StrapComponent> Strap,
+    Entity<BuckleComponent> Buckle,
+    EntityUid? User,
+    bool Popup)
+{
+    public bool Cancelled;
+}
+
+/// <summary>
+/// Event raised directed at a buckle entity before it gets unbuckled.
+/// </summary>
+[ByRefEvent]
+public record struct UnbuckleAttemptEvent(
+    Entity<StrapComponent> Strap,
+    Entity<BuckleComponent> Buckle,
+    EntityUid? User,
+    bool Popup)
+{
+    public bool Cancelled;
+}
+
+/// <summary>
+/// Event raised directed at a strap entity after something has been buckled to it.
+/// </summary>
+[ByRefEvent]
+public readonly record struct StrappedEvent(Entity<StrapComponent> Strap, Entity<BuckleComponent> Buckle);
+
+/// <summary>
+/// Event raised directed at a buckle entity after it has been buckled.
+/// </summary>
+[ByRefEvent]
+public readonly record struct BuckledEvent(Entity<StrapComponent> Strap, Entity<BuckleComponent> Buckle);
+
+/// <summary>
+/// Event raised directed at a strap entity after something has been unbuckled from it.
+/// </summary>
+[ByRefEvent]
+public readonly record struct UnstrappedEvent(Entity<StrapComponent> Strap, Entity<BuckleComponent> Buckle);
+
+/// <summary>
+/// Event raised directed at a buckle entity after it has been unbuckled from some strap entity.
+/// </summary>
+[ByRefEvent]
+public readonly record struct UnbuckledEvent(Entity<StrapComponent> Strap, Entity<BuckleComponent> Buckle);
 
 [Serializable, NetSerializable]
 public enum BuckleVisuals

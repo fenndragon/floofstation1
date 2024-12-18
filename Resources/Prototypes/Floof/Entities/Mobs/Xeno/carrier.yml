@@ -1,0 +1,121 @@
+﻿- type: entity
+  parent:
+  - CMXenoDeveloped
+  - CMXenoTail
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  id: CMXenoCarrier
+  name: Carrier
+  description: A strange-looking alien creature. It carries a number of scuttling jointed crablike creatures.
+  components:
+  - type: GhostRole
+    name: cm-job-name-xeno-carrier
+  - type: Sprite
+    sprite: _RMC14/Mobs/Xenonids/Carrier/carrier.rsi
+    layers:
+    - map: [ "enum.XenoVisualLayers.Base" ]
+      state: alive
+    - map: [ "enum.RMCDamageVisualLayers.Base" ]
+      visible: false
+    - map: [ "enum.ParasiteOverlayLayers.RightArm" ]
+      visible: false
+    - map: [ "enum.ParasiteOverlayLayers.Head" ]
+      visible: false
+    - map: [ "enum.ParasiteOverlayLayers.LeftArm" ]
+      visible: false
+    - map: [ "enum.ParasiteOverlayLayers.Back" ]
+      visible: false
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      650: Critical
+      750: Dead
+  - type: Xeno
+    role: CMXenoCarrier
+    actionIds:
+    - ActionXenoRest
+    - ActionXenoRegurgitate
+    - ActionXenoWatch
+    - ActionXenoTailStab
+    - ActionXenoOrderConstruction
+    - ActionXenoPheromones
+    - ActionXenoPlantWeeds
+    - ActionXenoResinHole
+    - ActionXenoThrowParasite
+    - ActionXenoRetrieveEgg
+    - ActionXenoParasiteReserve
+    - ActionXenoDevolve
+    tier: 2
+    hudOffset: 0,0.19
+    unlockAt: 300 # 5 minutes
+  - type: XenoHeavy
+  - type: XenoDevolve
+    devolvesTo:
+    - CMXenoDrone
+  - type: XenoConstruction
+    canOrderConstruction:
+    - HiveCoreXenoConstructionNode
+  - type: XenoPheromones
+    pheromonesMultiplier: 2
+  - type: XenoPlasma
+    plasma: 500
+    maxPlasma: 500
+    plasmaRegenOnWeeds: 3.5
+  - type: CMArmor
+    explosionArmor: 20
+  - type: XenoDevour
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 27.5
+  - type: XenoTailStab
+    tailDamage:
+      groups:
+        Brute: 42
+  - type: Tackle
+    max: 4
+    chance: 0.5
+    stunMin: 4
+    stunMax: 5
+  - type: TunnelRenamer
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 3.5
+  - type: SlowOnPull
+    slowdowns:
+    - multiplier: 0.6375
+      whitelist:
+        components:
+        - Marine
+    - multiplier: 0.7075
+      whitelist:
+        components:
+        - XenoLight
+    - multiplier: 0.475
+      whitelist:
+        components:
+        - XenoHeavy
+  - type: EggPlantTime
+    plantTime: 1
+  - type: WhitelistPickup
+    whitelist:
+      components:
+      - XenoParasite
+      - XenoEgg
+      - XenoFruit
+  - type: XenoParasiteThrower
+  - type: XenoEggRetriever
+  - type: XenoNurturing
+  - type: RMCSize
+    size: Big
+  - type: RMCXenoDamageVisuals
+    prefix: carrier
+  - type: TacticalMapIcon
+    icon:
+      sprite: _RMC14/Interface/map_blips.rsi
+      state: carrier
