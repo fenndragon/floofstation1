@@ -617,6 +617,13 @@ namespace Content.Shared.Interaction
         {
             if (!Resolve(other, ref other.Comp))
                 return false;
+            var ev = new InRangeOverrideEvent(origin, other);
+            RaiseLocalEvent(origin, ref ev);
+
+            if (ev.Handled)
+            {
+                return ev.InRange;
+            }
 
             return InRangeUnobstructed(origin,
                 other,
@@ -1142,6 +1149,13 @@ namespace Content.Shared.Interaction
         /// </summary>
         public bool IsAccessible(Entity<TransformComponent?> user, Entity<TransformComponent?> target)
         {
+            var ev = new AccessibleOverrideEvent(user, target);
+
+            RaiseLocalEvent(user, ref ev);
+
+            if (ev.Handled)
+                return ev.Accessible;
+
             if (_containerSystem.IsInSameOrParentContainer(user, target, out _, out var container))
                 return true;
 
@@ -1291,4 +1305,32 @@ namespace Content.Shared.Interaction
     /// <param name="Cancelled">Whether the hand interaction should be cancelled.</param>
     [ByRefEvent]
     public record struct CombatModeShouldHandInteractEvent(bool Cancelled = false);
+
+    /// <summary>
+    /// Override event raised directed on the user to say the target is accessible.
+    /// </summary>
+    /// <param name="User"></param>
+    /// <param name="Target"></param>
+    [ByRefEvent]
+    public record struct AccessibleOverrideEvent(EntityUid User, EntityUid Target)
+    {
+        public readonly EntityUid User = User;
+        public readonly EntityUid Target = Target;
+
+        public bool Handled;
+        public bool Accessible = false;
+    }
+
+    /// <summary>
+    /// Override event raised directed on a user to check InRangeUnoccluded AND InRangeUnobstructed to the target if you require custom logic.
+    /// </summary>
+    [ByRefEvent]
+    public record struct InRangeOverrideEvent(EntityUid User, EntityUid Target)
+    {
+        public readonly EntityUid User = User;
+        public readonly EntityUid Target = Target;
+
+        public bool Handled;
+        public bool InRange = false;
+    }
 }

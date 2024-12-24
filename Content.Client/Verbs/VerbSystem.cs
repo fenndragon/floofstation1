@@ -66,6 +66,16 @@ namespace Content.Client.Verbs
                 ? Visibility
                 : Visibility | MenuVisibility.NoFov;
 
+            var ev = new MenuVisibilityEvent
+            {
+                TargetPos = targetPos,
+                Visibility = visibility,
+            };
+
+            RaiseLocalEvent(player, ref ev);
+            visibility = ev.Visibility;
+
+
 
             // Get entities
             List<EntityUid> entities;
