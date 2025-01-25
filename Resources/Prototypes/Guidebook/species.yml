@@ -21,6 +21,7 @@
     #- Harpy
     - Felinid
     - Oni
+    - Chitinid
 
 - type: guideEntry
   id: Arachnid
@@ -67,6 +68,7 @@
   name: species-name-harpy
   text: "/ServerInfo/Guidebook/Mobs/Harpy.xml"
 
+
 - type: guideEntry
   id: Shadowkin
   name: species-name-shadowkin
@@ -77,3 +79,8 @@
   id: Resomi
   name: species-name-resomi
   text: "/ServerInfo/Guidebook/Mobs/Resomi.xml"
+
+- type: guideEntry
+  id: Harpy
+  name: species-name-harpy
+  text: "/ServerInfo/Guidebook/Mobs/Harpy.xml"
