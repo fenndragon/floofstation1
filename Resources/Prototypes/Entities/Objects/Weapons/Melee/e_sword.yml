@@ -287,9 +287,12 @@
     activatedDisarmMalus: 0.7
   - type: Wieldable
   - type: MeleeWeapon
-    wideAnimationRotation: -135
-    attackRate: 1.5
+    attackRate: 1.6
     angle: 100
+    heavyWindupModifier: .9
+    heavyDamageModifier: 1.5
+    soundHit:
+      path: /Audio/Weapons/eblade1.ogg
     damage:
       types:
         Blunt: 4.5

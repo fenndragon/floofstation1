@@ -42,7 +42,7 @@ public sealed class WieldableSystem : EntitySystem
         SubscribeLocalEvent<WieldableComponent, GotUnequippedHandEvent>(OnItemLeaveHand);
         SubscribeLocalEvent<WieldableComponent, VirtualItemDeletedEvent>(OnVirtualItemDeleted);
         SubscribeLocalEvent<WieldableComponent, GetVerbsEvent<InteractionVerb>>(AddToggleWieldVerb);
-        SubscribeLocalEvent<WieldableComponent, HandDeselectedEvent>(OnDeselectWieldable);
+        SubscribeLocalEvent<WieldableComponent, DisarmAttemptEvent>(OnDisarmAttemptEvent);
 
         SubscribeLocalEvent<MeleeRequiresWieldComponent, AttemptMeleeEvent>(OnMeleeAttempt);
         SubscribeLocalEvent<GunRequiresWieldComponent, ShotAttemptedEvent>(OnShootAttempt);
@@ -99,25 +99,15 @@ public sealed class WieldableSystem : EntitySystem
             _handsSystem.EnumerateHands(args.User).Count() > 2)
             return;
 
-        TryUnwield(uid, component, args.User);
+        gun.MinAngle += component.MinAngle;
+        gun.MaxAngle += component.MaxAngle;
+        Dirty(gun);
     }
 
-    private void OnGunRefreshModifiers(Entity<GunWieldBonusComponent> bonus, ref GunRefreshModifiersEvent args)
+    private void OnDisarmAttemptEvent(EntityUid uid, WieldableComponent component, DisarmAttemptEvent args)
     {
-        if (TryComp(bonus, out WieldableComponent? wield) &&
-            wield.Wielded)
-        {
-            args.MinAngle += bonus.Comp.MinAngle;
-            args.MaxAngle += bonus.Comp.MaxAngle;
-            args.AngleDecay += bonus.Comp.AngleDecay;
-            args.AngleIncrease += bonus.Comp.AngleIncrease;
-        }
-    }
-
-    private void OnExamine(EntityUid uid, GunWieldBonusComponent component, ref ExaminedEvent args)
-    {
-        if (component.WieldBonusExamineMessage != null)
-            args.PushText(Loc.GetString(component.WieldBonusExamineMessage));
+        if (component.Wielded)
+            args.Cancel();
     }
 
     private void AddToggleWieldVerb(EntityUid uid, WieldableComponent component, GetVerbsEvent<InteractionVerb> args)

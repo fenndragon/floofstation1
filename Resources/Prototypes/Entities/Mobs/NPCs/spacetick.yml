@@ -43,7 +43,7 @@
       0: Alive
       15: Dead
   - type: Stamina
-    critThreshold: 15
+    excess: 15
   - type: MovementAlwaysTouching
   - type: DamageStateVisuals
     states:

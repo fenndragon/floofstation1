@@ -76,7 +76,7 @@
     speedModifierThresholds:
       25: 0.5
   - type: Stamina
-    critThreshold: 200
+    excess: 200
   - type: Bloodstream
     bloodReagent: FluorosulfuricAcid
     bloodMaxVolume: 650
@@ -162,7 +162,7 @@
       150: Critical
       200: Dead
   - type: Stamina
-    critThreshold: 300
+    excess: 300
   - type: MovementSpeedModifier
     baseWalkSpeed : 3
     baseSprintSpeed : 3

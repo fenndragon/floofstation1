@@ -78,7 +78,7 @@
       Alive: BorgHealth
     showOverlays: false
   - type: Stamina
-    critThreshold: 120
+    excess: 120
   - type: Destructible
     thresholds:
     - trigger:
