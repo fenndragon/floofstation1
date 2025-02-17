@@ -838,6 +838,8 @@
     - !type:CharacterSpeciesRequirement
       species:
         - IPC
+    - !type:CharacterItemGroupRequirement
+      group: TraitsMind
   functions:
     - !type:TraitAddComponent
       components:
@@ -856,8 +858,6 @@
     - !type:CharacterDepartmentRequirement
       departments:
         - Security
-        - Dignitary
-        - Command
     - !type:CharacterSpeciesRequirement
       species:
         - IPC
@@ -865,6 +865,8 @@
       inverted: true
       traits:
         - OmniEyesModule
+    - !type:CharacterItemGroupRequirement
+      group: TraitsMind
   functions:
     - !type:TraitAddComponent
       components:
@@ -889,6 +891,8 @@
       traits:
         - DiagnosticEyesModule
         - OmniEyesModule
+    - !type:CharacterItemGroupRequirement
+      group: TraitsMind
   functions:
     - !type:TraitAddComponent
       components:
@@ -916,6 +920,8 @@
       traits:
         - MedicalEyesModule
         - OmniEyesModule
+    - !type:CharacterItemGroupRequirement
+      group: TraitsMind
   functions:
     - !type:TraitAddComponent
       components:
@@ -936,8 +942,6 @@
     - !type:CharacterDepartmentRequirement
       departments:
         - Security
-        - Dignitary
-        - Command
     - !type:CharacterSpeciesRequirement
       species:
         - IPC
@@ -947,6 +951,8 @@
         - MedicalEyesModule
         - DiagnosticEyesModule
         - SecurityEyesModule
+    - !type:CharacterItemGroupRequirement
+      group: TraitsMind
   functions:
     - !type:TraitAddComponent
       components:
@@ -974,6 +980,8 @@
     - !type:CharacterSpeciesRequirement
       species:
         - IPC
+    - !type:CharacterItemGroupRequirement
+      group: TraitsMind
   functions:
     - !type:TraitAddComponent
       components:
@@ -991,6 +999,8 @@
     - !type:CharacterSpeciesRequirement
       species:
         - IPC
+    - !type:CharacterItemGroupRequirement
+      group: TraitsMind
   functions:
     - !type:TraitAddComponent
       components:

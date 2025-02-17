@@ -457,5 +457,102 @@ trait-description-CyberEyesOmni =
     Note that this augmentation is considered Contraband for anyone not under the employ of station Security personel,
     and may be disabled by your employer before dispatch to the station.
 
+trait-name-DispelPower = Normality Projection
+trait-description-DispelPower =
+    Your Mentalic abilities include the power to enforce normality upon Noospheric phenomena.
+    This power, commonly known as "Dispel", allows the user to destroy otherworldly entities with their mind,
+    or to immediately end psychic effects.
+
+trait-name-MetapsionicPower = Metapsion
+trait-description-MetapsionicPower =
+    You are able to intuitively sense the activation of psionic abilities, as well as send out a 'scanning' pulse
+    to detect whether or not psions are nearby. This ability has a wide area of effect, and cannot precisely
+    scan individual entities. Still, it is better than being blind.
+
+trait-name-XenoglossyPower = Xenoglossy
+trait-description-XenoglossyPower =
+    An advanced form of Telepathy, Xenoglossy is the ability to speak using emotional and metaphysical concepts,
+    rather than words, to impart meaning directly into the minds of a listener. When speaking using Xenoglossy, a psion can be
+    universally understood by any entity, who will hear the words as if spoken in one's own native tongue. Additionally,
+    Xenoglossy grants the ability to divine the underlying emotional meaning from the minds of other speakers,
+    allowing its user to understand any spoken language as if it was the user's own native tongue.
+
+trait-name-PsychognomyPower = Psychognomist
+trait-description-PsychognomyPower =
+    A special talent derived from Telepathy, Psychognomy is the ability to read the underlying imprint of telepathic messages.
+    A Psychognomist can glean additional information from their telepathy, seeing vague outlines of what the source of a message
+    might be. This information is not precise, and is largely only useful for narrowing down who the source of a message might be.
+
+trait-name-Redshirt = Redshirt
+trait-description-Redshirt =
+    "They said this air would be breathable.
+    Get in, get out again, and no one gets hurt.
+    Something is pulling me up the hill.
+    I look down in my red shirt.
+    I look down in my red shirt."
+    Reduces your threshold for death by 100 points.
+
+trait-name-BrittleBoneDisease = Osteogenesis Imperfecta
+trait-description-BrittleBoneDisease =
+    Also known as "brittle bone disease", people with this genetic disorder have bones that are easily broken,
+    often simply by moving. This trait reduces your threshold for critical injury by 50 points.
+
+trait-name-LightAmplification = CyberEyes Module: Light Amplification
+trait-description-LightAmplification =
+    Your CyberEyes have been enhanced with a light amplifier module, enabling the user to toggle between standard sight and "Night Vision" mode.
+
+trait-name-ThermographicVision = CyberEyes Module: Thermographic Scanner
+trait-description-ThermographicVision =
+    Your CyberEyes have been enhanced with a Thermographic Scanner. When enabled, it captures a snapshot of the user's surroundings, while highlighting all
+    biological life forms. It can even detect individuals through the walls of a station.
+
 trait-name-ShadowkinBlackeye = Blackeye
-trait-description-ShadowkinBlackeye = You lose your special Shadowkin powers, in return for some points.
+trait-description-ShadowkinBlackeye =
+    You lose your special Shadowkin powers & respect amongst your peers, in return for some points. Effectively, you are only a Shadowkin in name, not in practice.
+
+trait-name-LyreBird = Lyre Bird
+trait-description-LyreBird =
+    Your natural talent for mimicry vastly exceeds that of other Harpies. You have the ability to perfectly imitate songs in their entirety.
+    Be your own full symphony orchestra, jazz group, or metal band.
+
+trait-name-NaniteAutoRepairBots = Nanite Auto-Repair Bots
+trait-description-NaniteAutoRepairBots =
+    Your chassis has been outfitted with Nanite Repair Drones. Whenever your sensors detect that you've recieved structural damage, the NRDs will activate to bring you back to operational standards.
+
+trait-name-BionicLeg = Bionic Leg
+trait-description-BionicLeg =
+    One or more of your limbs have been replaced with an expensive, state of the art bionic. It could be either one made of highly realistic synthflesh,
+    or a more obvious metal limb. This limb provides enhanced speed to it's user, allowing you to run away from situations faster or get to a place faster.
+
+trait-name-FlareShieldingModule = I.P.C Eye Module: Flare Shielding
+trait-description-FlareShieldingModule =
+    Your cybereyes have been fitted with a photochromic lense that automatically darkens in response to intense stimuli.
+    This provides immunity from most bright flashes of light, such as those from welding arcs, exclusive to IPCs because it only needs the module
+    skipping the eye insertion process.
+
+trait-name-SecurityEyesModule = I.P.C Eye Module: Sechud
+trait-description-SecurityEyesModule =
+    A module installed in IPCs that work for the security department and similar, this module is considered contraband and may be removed if the unit isn't working for the security department.
+
+trait-name-MedicalEyesModule = I.P.C Eye Module: Medical
+trait-description-MedicalEyesModule =
+    Your eyes have been upgraded to include a built-in Medical Hud, allowing you to track the relative health condition of biological organisms.
+
+trait-name-DiagnosticEyesModule = I.P.C Eye Module: Diagnostics
+trait-description-DiagnosticEyesModule =
+    You possess a built-in Diagnostic Hud, allowing you to track the condition of synthetic entities.
+
+trait-name-OmniEyesModule = I.P.C Eye Module: Premium Model
+trait-description-OmniEyesModule =
+    This upgrade provides the combined benefits of a SecHud, MedHud, and a Diagnostics Module.
+    Note that this module is considered Contraband for anyone not under the employ of station Security personel,
+    and may be disabled by your employer before dispatch to the station.
+
+trait-name-LightAmplificationModule = I.P.C Eye Module: Light Amplification
+trait-description-LightAmplificationModule =
+    Your vision has been enhanced with a light amplifier module, enabling the user to toggle between standard sight and "Night Vision" mode.
+
+trait-name-ThermographicVisionModule = I.P.C Eye Module: Thermographic Scanner
+trait-description-ThermographicVisionModule =
+    Your vision has been enhanced with a Thermographic Scanner. When enabled, it captures a snapshot of the user's surroundings, while highlighting all
+    biological life forms. It can even detect individuals through the walls of a station.
