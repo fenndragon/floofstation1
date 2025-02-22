@@ -124,6 +124,7 @@
       species:
         - Vulpkanin
         - IPC
+        - Rodentia
 
 - type: trait
   id: ParkourTraining
