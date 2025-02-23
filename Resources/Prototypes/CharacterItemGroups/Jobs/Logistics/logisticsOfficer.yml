@@ -39,6 +39,8 @@
       id: LoadoutCommandQMHeadBeret
     - type: loadout
       id: LoadoutCommandQMHeadSoft
+    - type: loadout
+      id: LoadoutCommandClothingHeadHatBeretQM
 
 - type: characterItemGroup
   id: LoadoutLogisticsOfficerId

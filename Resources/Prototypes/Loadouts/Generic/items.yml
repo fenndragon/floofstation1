@@ -757,3 +757,106 @@
   cost: 1
   items:
     - DrinkVacuumFlask
+
+- type: loadout
+  id: LoadoutItemAACTablet
+  category: Items
+  cost: 2
+  items:
+    - AACTablet
+
+- type: loadout
+  id: LoadoutItemCaneBlind
+  category: Items
+  cost: 0 # It shouldnt cost points to be able to function.
+  items:
+    - WhiteCane
+
+# Pets
+- type: loadout
+  id: LoadoutItemPetMouse
+  category: Items
+  cost: 2
+  canBeHeirloom: true
+  customColorTint: true # Unethical hair dyes!
+  items:
+    - MobMousePet
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutPets
+  functions:
+    - !type:LoadoutMakeFollower
+
+- type: loadout
+  id: LoadoutItemPetHamster
+  category: Items
+  cost: 2
+  canBeHeirloom: true
+  customColorTint: true
+  items:
+    - MobHamsterPet
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutPets
+  functions:
+    - !type:LoadoutMakeFollower
+
+- type: loadout
+  id: LoadoutItemPetMothroach
+  category: Items
+  cost: 2
+  canBeHeirloom: true
+  customColorTint: true
+  items:
+    - MobMothroachPet
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutPets
+  functions:
+    - !type:LoadoutMakeFollower
+
+- type: loadout
+  id: LoadoutItemPetCockroach
+  category: Items
+  cost: 2
+  canBeHeirloom: true
+  customColorTint: true
+  items:
+    - MobCockroachPet
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutPets
+  functions:
+    - !type:LoadoutMakeFollower
+
+- type: loadout
+  id: LoadoutItemBlackDeck
+  category: Items
+  cost: 3
+  canBeHeirloom: false
+  items:
+    - CardBoxBlack
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCards
+
+- type: loadout
+  id: LoadoutItemNTDeck
+  category: Items
+  cost: 3
+  canBeHeirloom: false
+  items:
+    - CardBoxNanotrasen
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCards
+    - !type:CharacterDepartmentRequirement
+       departments:
+         - Command
+
+- type: loadout
+  id: LoadoutItemFoodLollipop
+  category: Items
+  cost: 0
+  items:
+    - FoodLollipop

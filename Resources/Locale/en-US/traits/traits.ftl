@@ -3,7 +3,7 @@ trait-description-Blindness = You are legally blind, and can't see clearly past 
 trait-examined-Blindness = [color=lightblue]{CAPITALIZE(POSS-ADJ($target))} eyes are glassy and unfocused. It doesn't seem like {SUBJECT($target)} can see you well, if at all.[/color]
 
 trait-name-Narcolepsy = Narcolepsy
-trait-description-Narcolepsy = 
+trait-description-Narcolepsy =
     Due to a neurological disorder, controlling your sleep-wake cycles is difficult for you.
     As a result, you may repeatedly fall asleep for short periods of time throughout the day.
 
@@ -83,6 +83,24 @@ trait-description-Stutter =
 trait-name-Southern = Southern Drawl
 trait-description-Southern = You have a different way of speakin'.
 
+trait-name-GermanAccent = German accent
+trait-description-GermanAccent = You speak with a German accent.
+
+trait-name-RussianAccent = Russian accent
+trait-description-RussianAccent = You speak with a Russian accent.
+
+trait-name-FrenchAccent = French accent
+trait-description-FrenchAccent = You speak with a French accent.
+
+trait-name-ItalianAccent = Italian accent
+trait-description-ItalianAccent = You speak with a Italian accent.
+
+trait-name-MobsterAccent = Mobster accent
+trait-description-MobsterAccent = Fugeddaboutit! Yous talk numhallly, capiche?
+
+trait-name-SpanishAccent = Spanish accent
+trait-description-SpanishAccent = You speak with a Spanish accent.
+
 trait-name-Snoring = Snoring
 trait-description-Snoring = You tend to snore loudly while sleeping.
 
@@ -94,7 +112,7 @@ trait-name-Nearsighted = Nearsighted
 trait-description-Nearsighted = Your eyes are not what they once were, you have difficulty seeing things far away without corrective glasses.
 
 trait-name-NormalVisionHarpy = Trichromat Modification
-trait-description-NormalVisionHarpy = 
+trait-description-NormalVisionHarpy =
     Your eyes have been modified by means of advanced medicine to see in the standard colors of Red, Green, and Blue.
     You do not have the usual vision anomaly that your species may possess.
 
